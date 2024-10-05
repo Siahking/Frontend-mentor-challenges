@@ -1,8 +1,22 @@
-body{
-    background-color: #F4D04E;
+:root{
+    --mustard-yellow: #F4D04E;
+}
+
+body,button{
+    background-color: var(--mustard-yellow);
+}
+
+body,.bottom{
     display: flex;
-    justify-content: center;
     align-items: center;
+}
+
+#p1,#p2{
+    font-size: 0.75rem;
+}
+
+body{
+    justify-content: center;
     height: 800px;
     font-family: 'Figtree', sans-serif;;
 }
@@ -25,37 +39,28 @@ img{
 }
 
 button{
-    background-color: #F4D04E;
     border: none;
     font-weight: bold;
     padding: 8px 10px;
     border-radius: 4px;
     transition: ease 300ms;
-
 }
 
 button:hover{
     cursor: pointer;
     box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.85);
     background-color: black;
-    color: #F4D04E;
+    color: var(--mustard-yellow);
 }
 
 #p1{
     font-weight: 600;
-    font-size: 0.75rem;
 }
 
 #p2{
     color: #808080;
-    font-size: 0.75rem;
     margin-bottom: 18px;
     opacity: 0.75;
-}
-
-.bottom{
-    display: flex;
-    align-items: center;
 }
 
 #pfp{

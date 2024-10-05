@@ -2,13 +2,6 @@
     margin: 0;
 }
 
-body{
-    p{
-        font-size: 18px;
-        font-family: 'Hanken Grotesk', sans-serif;
-    }
-}
-
 :root{
     --lred: hsl(0, 100%, 67%);
     --oyellow: hsl(39, 100%, 56%);
@@ -22,6 +15,11 @@ body{
     --llavender: hsl(221, 100%, 89%);
     --dgblue: hsl(224, 30%, 27%);
     --custompurple: hsl(252, 94%, 86%);
+}
+
+p{
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
 }
 
 .inner-div,.small-div,#container,#circle,#bottom-div,#top-div{

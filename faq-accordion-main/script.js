@@ -1,20 +1,23 @@
 function hideAll(){
-    const ansarr = ['#one','#two','#three','#four'];
-    const picarr = ['#pic1','#pic2','#pic3','#pic4'];
-    ansarr.forEach((item) => document.querySelector(item).hidden = true);
-    picarr.forEach((item) => document.querySelector(item).src = "assets/images/icon-plus.svg")
+    const ansarr = document.querySelectorAll('#answer-one,#answer-two,#answer-three,#answer-four');
+    const picarr = document.querySelectorAll('#pic1,#pic2,#pic3,#pic4');
+    ansarr.forEach(answer => {
+        if (!answer.classList.contains('hidden')){
+            answer.classList.add('hidden')
+        }
+    });
+    picarr.forEach(image => image.src = "images//icon-plus.svg")
 }
 
-function answer(number,image){
-    item = document.getElementById(number);
+function answer(answerNumber,image){
+    question = document.getElementById(answerNumber);
     image = document.getElementById(image);
-    if (!item.hidden){
-        hideAll();
-        image.src = "assets/images/icon-plus.svg";
+    if (question.classList.contains('hidden')){
+        hideAll()
+        question.classList.remove('hidden')
+        image.src = "images//icon-minus.svg";
     } else {
-        hideAll(); 
-        item.hidden = false;
-        image.src = "assets/images/icon-minus.svg";
+        hideAll()
     }
     
 }
